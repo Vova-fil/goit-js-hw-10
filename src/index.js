@@ -35,13 +35,13 @@ function onInputValueFetch(e) {
       }
 
       if (countries.length >= 2 && countries.length < 10) {
-        //clearSearchResult();
+        clearSearchResult();
 
         return markupListCountry;
       }
 
       if (countries.length === 1) {
-        //clearSearchResult();
+        clearSearchResult();
 
         return markupCardCountry();
       }
