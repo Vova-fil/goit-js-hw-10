@@ -22,7 +22,10 @@ function onInputValueFetch(e) {
 
   clearSearchResult();
 
-  if (nameCountry === '') {
+  if (nameCountry === ' ') {
+    return;
+  }
+  if (!nameCountry) {
     return;
   }
 
@@ -37,13 +40,13 @@ function onInputValueFetch(e) {
       if (countries.length >= 2 && countries.length < 10) {
         clearSearchResult();
 
-        return markupListCountry;
+        return markupListCountry(countries);
       }
 
       if (countries.length === 1) {
         clearSearchResult();
 
-        return markupCardCountry();
+        return markupCardCountry(countries);
       }
     })
 

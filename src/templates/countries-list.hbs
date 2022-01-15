@@ -1,4 +1,7 @@
-<li class='country-list-item'>
-  <img class='country-flag' src={{flags.png}} alt='County flag image' />
-  <p class='country-name'>{{name}}</p>
-</li>
+{{#each this}}
+  <li class='country-list-item'>
+    <img class='country-flag' src={{flags.png}} alt='County flag image' />
+    <p class='country-name'>{{name}}</p>
+  </li>
+
+{{/each}}
