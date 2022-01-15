@@ -1,5 +1,19 @@
-<img class='country-flag' src={{flags.png}} alt='County flag image' />
-<p class='country-name'>{{name}}</p>
+{{!-- <img class='country-flag' src={{flags.png}} alt='County flag image' />
+<p class='country-name'>{{name.common}}</p>
 <p class='coutry-capital'>Capital: <span>{{capital}}</span></p>
 <p class='country-population'>Population: <span>{{population}}</span></p>
-<p class='country-langugage'>Languages: <span>{{#each languages}} {{name}} {{/each}}</span></p>
+<p class='country-langugage'>Languages: <span>{{#each languages}} {{name}} {{/each}}</span></p> --}}
+
+{{#each this}}
+  <ul class='country-info-list'>
+    <li class='country-item'>
+      <img src='{{flags.svg}}' width='4%' alt='Country flag' />
+      <p class='country-name country-name-big'>{{name.common}}</p>
+    </li>
+  </ul>
+  <p class='country-info'><span class='country-info__text'>Capital:</span> {{capital}}</p>
+  <p class='country-info'><span class='country-info__text'>Population:</span> {{population}}</p>
+  <p class='country-info'><span class='country-info__text'>Language:</span>{{#each languages}}
+      {{this}},
+    {{/each}}</p>
+{{/each}}
